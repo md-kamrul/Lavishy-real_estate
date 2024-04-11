@@ -1,0 +1,13 @@
+.menu li>*:not(ul, .menu-title, details, .btn):hover,
+.menu li>*:not(ul, .menu-title, details, .btn).active,
+.menu li>details>summary:hover {
+    background-color: transparent;
+    color: #00c867;
+}
+
+.menu li>*:not(ul, .menu-title, details, .btn):active,
+.menu li>*:not(ul, .menu-title, details, .btn).active,
+.menu li>details>summary:active {
+    background-color: #00c867;
+    color: white;
+}

@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import "./Navbar.css"
 
 const Navbar = () => {
 
@@ -11,8 +12,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="w-[80%] mx-auto">
-            <div className="navbar bg-base-100">
+        <div className="w-[80%] mx-auto ">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +23,9 @@ const Navbar = () => {
                             {navbar}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Lavishy</a>
+                    <Link to="/" className="btn btn-ghost text-xl text-[#00c867] hover:bg-transparent">
+                        Lavishy
+                    </Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
