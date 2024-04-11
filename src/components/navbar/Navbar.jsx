@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
 
@@ -6,10 +7,11 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">LogIn</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        <li><NavLink to="/profile"><CgProfile className="text-3xl" /></NavLink></li>
     </>
 
     return (
-        <div>
+        <div className="w-[80%] mx-auto">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -22,14 +24,14 @@ const Navbar = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">Lavishy</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navbar}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                {/* <div className="navbar-end">
                     <a className="btn">Button</a>
-                </div>
+                </div> */}
             </div>
         </div>
     );
