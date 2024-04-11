@@ -6,7 +6,7 @@ import { IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
     return (
-        <div className="w-[80%] mx-auto mt-8">
+        <div className="md:w-[80%] mx-auto mt-8">
             <h2 className="text-center text-2xl font-bold">LogIn</h2>
             <div className="card shrink-0 w-[80%] mx-auto">
                 <form className="card-body">
@@ -23,7 +23,7 @@ const Login = () => {
                         <input type="password" placeholder="Your Password" className="input input-bordered" required />
                         <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                         <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
-                        <div className="flex justify-between">
+                        <div className="flex gap-12 md:gap-0 md:justify-between">
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
@@ -36,9 +36,9 @@ const Login = () => {
                         <button className="btn bg-[#2b3440] text-white">Login</button>
                     </div>
                     <div>
-                        <h2 className="mt-5 text-center text-xl">-------------  Or LogIn Using  -------------</h2>
+                        <h2 className="mt-5 text-center md:text-xl">-------------  Or LogIn Using  -------------</h2>
                         <div className="w-[20%] mx-auto mt-5">
-                            <div className="flex justify-evenly w-[80%] mx-auto">
+                            <div className="flex gap-3 md:gap-0 md:justify-evenly md:w-[80%] mx-auto">
                                 <FcGoogle className="text-3xl cursor-pointer" />
                                 <FaSquareXTwitter className="text-3xl cursor-pointer" />
                             </div>
