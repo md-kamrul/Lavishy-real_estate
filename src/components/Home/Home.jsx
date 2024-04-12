@@ -1,4 +1,5 @@
 import Footer from "../footer/Footer";
+import OurClients from "../ourClients/OurClients";
 
 const Home = () => {
     return (
@@ -34,6 +35,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* client */}
+            <OurClients></OurClients>
 
             {/* footer */}
             <Footer></Footer>

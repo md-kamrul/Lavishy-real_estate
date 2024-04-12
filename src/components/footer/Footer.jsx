@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-[#2b3440] text-white mt-12">
+            <footer className="footer p-10 bg-[#2b3440] text-white mt-24">
                 <aside>
                     <img className="w-[80px]" src="./../../../public/assets/fav_icon.png" alt="" />
                     <p>Lavishy Real Estate Ltd<br />Luxury real estate agency since 1992</p>
