@@ -1,7 +1,8 @@
-// import Footer from "../footer/Footer";
+import Footer from "../footer/Footer";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaLocationCrosshairs } from "react-icons/fa6";
+// import LocationMap from "./locationMap/LocationMap";
 
 const ContactUs = () => {
     return (
@@ -47,10 +48,13 @@ const ContactUs = () => {
                         <button className="btn bg-[#00c867] border text-white mt-5 hover:text-[#00c867] hover:bg-transparent hover:border-[#00c867]">Submit</button>
                     </form>
                 </div>
+                <div className="w-[50%]">
+                    {/* <LocationMap></LocationMap> */}
+                </div>
             </div>
-            {/* <div>
+            <div>
                 <Footer></Footer>
-            </div> */}
+            </div>
         </div>
     );
 };
