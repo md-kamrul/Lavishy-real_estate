@@ -12,7 +12,7 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 export default function App() {
     return (
-        <div>
+        <div data-aos="zoom-in">
             <h2 className='text-center text-[#2b3440] mt-24 font-bold text-4xl mb-5' >Our Clients</h2>
             <div>
                 <Swiper
