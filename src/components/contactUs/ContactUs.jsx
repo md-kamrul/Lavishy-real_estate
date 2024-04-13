@@ -7,7 +7,7 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 const ContactUs = () => {
     return (
         <div>
-            <div className="p-14 bg-[#2b3440] text-white mt-24 w-[80%] mx-auto rounded-lg flex justify-between">
+            <div className="p-14 bg-[#2b3440] text-white mt-24 w-[80%] mx-auto rounded-lg flex justify-between flex-col md:flex-row gap-5 md:gap-0">
                 <div className="flex gap-2">
                     <MdEmail className="text-2xl" />
                     <div>
@@ -34,13 +34,13 @@ const ContactUs = () => {
                 </div>
             </div>
             <div className="md:w-[80%] mx-auto mt-14">
-                <div className="card shrink-0 w-[50%]">
+                <div className="card shrink-0 w-full md:w-[50%]">
                     <form className="card-body">
-                        <div className="flex gap-5">
+                        <div className="flex gap-5 flex-col md:flex-row">
                             <input type="text" placeholder="Your First Name" className="input input-bordered" required />
                             <input type="text" placeholder="Your Last Name" className="input input-bordered" required />
                         </div>
-                        <div className="flex gap-5">
+                        <div className="flex gap-5 flex-col md:flex-row">
                             <input type="email" placeholder="Your Email" className="input input-bordered" required />
                             <input type="number" placeholder="Your Phone" className="input input-bordered" required />
                         </div>
