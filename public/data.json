@@ -1,0 +1,153 @@
+[
+    {
+        "image": "path/to/image1.jpg",
+        "estate_title": "Luxury Penthouse in Downtown",
+        "id": 1,
+        "segment_name": "Penthouse",
+        "description": "A stunning penthouse apartment with breathtaking city views.",
+        "price": 10000000,
+        "status": "sale",
+        "area": 2000,
+        "location": "New York City, NY",
+        "facilities": [
+            "Living Room",
+            "Swimming Pool",
+            "Kitchen"
+        ]
+    },
+    {
+        "image": "path/to/image2.jpg",
+        "estate_title": "Beachfront Villa with Private Pool",
+        "id": 2,
+        "segment_name": "Villa",
+        "description": "Relax in paradise at this beachfront villa with a private pool.",
+        "price": 5000000,
+        "status": "rent",
+        "area": 3500,
+        "location": "Miami, FL",
+        "facilities": [
+            "Living Room",
+            "Swimming Pool",
+            "Kitchen",
+            "Balcony"
+        ]
+    },
+    {
+        "image": "path/to/image3.jpg",
+        "estate_title": "Secluded Island Retreat",
+        "id": 3,
+        "segment_name": "Private Island",
+        "description": "Escape to your own private island with unparalleled privacy.",
+        "price": 25000000,
+        "status": "sale",
+        "area": 100000,
+        "location": "South Pacific",
+        "facilities": [
+            "Living Room",
+            "Beach Access",
+            "Multiple Bedrooms"
+        ]
+    },
+    {
+        "image": "path/to/image10.jpg",
+        "estate_title": "Private Island Oasis with Crystal-Clear Lagoon",
+        "id": 4,
+        "segment_name": "Private Island",
+        "description": "Unwind in complete seclusion on this private island paradise boasting a crystal-clear lagoon.",
+        "price": 35000000,
+        "status": "sale",
+        "area": 50000,
+        "location": "Maldives",
+        "facilities": [
+            "Living Room",
+            "Infinity Pool",
+            "Private Beach",
+            "Water Sports Equipment"
+        ]
+    },
+    {
+        "image": "path/to/image11.jpg",
+        "estate_title": "Charming Ski Chalet with Cozy Fireplace",
+        "id": 5,
+        "segment_name": "Chalet",
+        "description": "Embrace the warmth and charm of this ski chalet after a day on the slopes.",
+        "price": 2000000,
+        "status": "rent",
+        "area": 1800,
+        "location": "Whistler, Canada",
+        "facilities": [
+            "Living Room with Fireplace",
+            "Hot Tub",
+            "Game Room",
+            "Ski Storage"
+        ]
+    },
+    {
+        "image": "path/to/image12.jpg",
+        "estate_title": "Mediterranean-Style Villa with Panoramic Ocean Views",
+        "id": 6,
+        "segment_name": "Villa",
+        "description": "Immerse yourself in Mediterranean living in this stunning villa with breathtaking ocean views.",
+        "price": 7000000,
+        "status": "sale",
+        "area": 3000,
+        "location": "Mykonos, Greece",
+        "facilities": [
+            "Living Room",
+            "Infinity Pool",
+            "Outdoor Terrace",
+            "Sea Kayaks"
+        ]
+    },
+    {
+        "image": "path/to/image13.jpg",
+        "estate_title": "Luxurious Treehouse Retreat nestled in Redwood Forest",
+        "id": 7,
+        "segment_name": "Treehouse",
+        "description": "Reconnect with nature in this luxurious treehouse retreat nestled amongst towering redwoods.",
+        "price": 1500000,
+        "status": "rent",
+        "area": 1000,
+        "location": "California Redwoods",
+        "facilities": [
+            "Living Room",
+            "Private Balcony",
+            "Outdoor Shower",
+            "Hammock"
+        ]
+    },
+    {
+        "image": "path/to/image14.jpg",
+        "estate_title": "Modern Farmhouse Estate with Sprawling Vineyard",
+        "id": 8,
+        "segment_name": "Estate",
+        "description": "Experience the charm of farm life with a modern twist in this estate featuring a sprawling vineyard.",
+        "price": 12000000,
+        "status": "sale",
+        "area": 75000,
+        "location": "Napa Valley, CA",
+        "facilities": [
+            "Living Room",
+            "Wine Cellar",
+            "Swimming Pool",
+            "Guest Cottages"
+        ]
+    },
+    {
+        "image": "path/to/image4.jpg",
+        "estate_title": "Oceanfront Mansion with Breathtaking Views",
+        "id": 9,
+        "segment_name": "Mansion",
+        "description": "Live the life of luxury in this oceanfront mansion with panoramic views.",
+        "price": 15000000,
+        "status": "sale",
+        "area": 5000,
+        "location": "Malibu, CA",
+        "facilities": [
+            "Living Room",
+            "Infinity Pool",
+            "Home Theater",
+            "Multiple Bedrooms"
+        ]
+    }
+]
