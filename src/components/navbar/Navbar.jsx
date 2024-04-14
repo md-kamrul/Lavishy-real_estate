@@ -23,7 +23,12 @@ const Navbar = () => {
                 :
                 <li><NavLink to="/login">LogIn</NavLink></li>
         }
-        <li><NavLink to="/register">Register</NavLink></li>
+        {
+            user ?
+                <li></li>
+                :
+                <li><NavLink to="/register">Register</NavLink></li>
+        }
         <li><NavLink to="/profile"><CgProfile className="text-3xl" /></NavLink></li>
     </>
 

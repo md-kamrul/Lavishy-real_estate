@@ -5,6 +5,7 @@ import Login from "../components/logIn/Login";
 import Register from "../components/register/Register";
 import Profile from "../components/profile/Profile";
 import ContactUs from "../components/contactUs/ContactUs";
+import PropertyDetails from "../components/propertiesDetails/PropertyDetails";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: <Profile></Profile>
+            },
+            {
+                path: "/properties/:id",
+                element: <PropertyDetails></PropertyDetails>
             }
         ]
     },

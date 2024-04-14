@@ -34,23 +34,23 @@ const ContactUs = () => {
                 </div>
             </div>
             <div className="md:w-[80%] mx-auto mt-14">
-                <div className="card shrink-0 w-full md:w-[50%]">
+                <div className="card w-full">
                     <form className="card-body">
-                        <div className="flex gap-5 flex-col md:flex-row">
-                            <input type="text" placeholder="Your First Name" className="input input-bordered" required />
-                            <input type="text" placeholder="Your Last Name" className="input input-bordered" required />
+                        <div className="flex gap-5 flex-col md:flex-row w-full">
+                            <input type="text" placeholder="Your First Name" className="input input-bordered md:w-1/2" required />
+                            <input type="text" placeholder="Your Last Name" className="input input-bordered md:w-1/2" required />
                         </div>
                         <div className="flex gap-5 flex-col md:flex-row">
-                            <input type="email" placeholder="Your Email" className="input input-bordered" required />
-                            <input type="number" placeholder="Your Phone" className="input input-bordered" required />
+                            <input type="email" placeholder="Your Email" className="input input-bordered md:w-1/2" required />
+                            <input type="number" placeholder="Your Phone" className="input input-bordered md:w-1/2" required />
                         </div>
                         <textarea placeholder="Type Your Massege" className="textarea textarea-bordered textarea-lg w-full" ></textarea>
-                        <button className="btn bg-[#00c867] border text-white mt-5 hover:text-[#00c867] hover:bg-transparent hover:border-[#00c867]">Submit</button>
+                        <button className="w-[50%] mx-auto btn bg-[#00c867] border text-white mt-5 hover:text-[#00c867] hover:bg-transparent hover:border-[#00c867]">Submit</button>
                     </form>
                 </div>
-                <div className="w-[50%]">
+                {/* <div className="w-[50%]"> */}
                     {/* <LocationMap></LocationMap> */}
-                </div>
+                {/* </div> */}
             </div>
             <div>
                 <Footer></Footer>

@@ -1,10 +1,11 @@
 import { AiFillDollarCircle } from "react-icons/ai";
 import { GrStatusInfo } from "react-icons/gr";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const dataCard = ({ singleData }) => {
 
-    const { estate_title, image, description, price, status, location } = singleData;
+    const { estate_title, image, description, price, status, location, id } = singleData;
 
     return (
         <div>
@@ -18,7 +19,7 @@ const dataCard = ({ singleData }) => {
                             :
                             <p>{description}</p>
                     }
-                    <div className="my-5 flex gap-3">
+                    <div className="my-3 flex gap-3">
                         <div className="font-medium flex gap-1">
                             <AiFillDollarCircle className="text-2xl text-[#00c867]" />{price}
                         </div>
@@ -29,9 +30,9 @@ const dataCard = ({ singleData }) => {
                     <div className="flex gap-3">
                         <FaLocationDot className="text-2xl text-[#00c867]" />{location}
                     </div>
-                    <div className="text-center underline font-bold mt-3 cursor-pointer">
-                        View Details
-                    </div>
+                    <Link to={`/properties/${id}`} className="text-center underline font-bold mt-3 cursor-pointer">
+                        View Property
+                    </Link>
                 </div>
             </div>
         </div>
