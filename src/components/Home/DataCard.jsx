@@ -29,8 +29,8 @@ const dataCard = ({ singleData }) => {
                     <div className="flex gap-3">
                         <FaLocationDot className="text-2xl text-[#00c867]" />{location}
                     </div>
-                    <div className="w-[40%] mx-auto mt-2">
-                        <button className="w-full mx-auto bg-[#00c867] text-white rounded-lg py-3 px-2">View Details</button>
+                    <div className="text-center underline font-bold mt-3 cursor-pointer">
+                        View Details
                     </div>
                 </div>
             </div>
