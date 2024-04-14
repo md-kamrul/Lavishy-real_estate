@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
@@ -10,6 +10,8 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -18,7 +20,14 @@ const Login = () => {
         const password = form.get("password");
 
         signIn(email, password)
-            .then()
+            .then(
+                navigate(
+                    location?.state?
+                    location.state
+                    :
+                    "/"
+                )
+            )
             .catch()
     }
 

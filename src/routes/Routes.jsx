@@ -6,6 +6,7 @@ import Register from "../components/register/Register";
 import Profile from "../components/profile/Profile";
 import ContactUs from "../components/contactUs/ContactUs";
 import PropertyDetails from "../components/propertiesDetails/PropertyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/properties/:id",
-                element: <PropertyDetails></PropertyDetails>
+                element: <PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>
             }
         ]
     },
