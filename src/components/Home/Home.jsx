@@ -1,7 +1,11 @@
 import Footer from "../footer/Footer";
 import OurClients from "../ourClients/OurClients";
+import DataCards from "./DataCards"
 
 const Home = () => {
+
+    
+
     return (
         <div>
             {/* Slider */}
@@ -35,6 +39,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* data cards */}
+            <DataCards></DataCards>
 
             {/* client */}
             <OurClients></OurClients>
