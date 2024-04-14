@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCu1tNUWY_jNYIddXcCjuMwIMvYc-wx3-w",
-  authDomain: "lavishy-luxury-real-estate.firebaseapp.com",
-  projectId: "lavishy-luxury-real-estate",
-  storageBucket: "lavishy-luxury-real-estate.appspot.com",
-  messagingSenderId: "459954758764",
-  appId: "1:459954758764:web:548655d7384953f1972449"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
