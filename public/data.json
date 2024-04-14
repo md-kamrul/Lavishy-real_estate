@@ -1,6 +1,6 @@
 [
     {
-        "image": "path/to/image1.jpg",
+        "image": "https://i.ibb.co/t3rzLxq/JW-Los-Cabos-2015-Main-Exterior-2166579562.jpg",
         "estate_title": "Luxury Penthouse in Downtown",
         "id": 1,
         "segment_name": "Penthouse",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "image": "path/to/image2.jpg",
+        "image": "https://i.ibb.co/vXTWw8C/wp8725597-2587445432.jpg",
         "estate_title": "Beachfront Villa with Private Pool",
         "id": 2,
         "segment_name": "Villa",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "image": "path/to/image3.jpg",
+        "image": "https://i.ibb.co/p4X3wDn/03-Best-Luxury-Caribbean-Zoetry-Agua-12308177-10153887887523054-6082492700201757636-o.jpg",
         "estate_title": "Secluded Island Retreat",
         "id": 3,
         "segment_name": "Private Island",
@@ -49,7 +49,7 @@
         ]
     },
     {
-        "image": "path/to/image10.jpg",
+        "image": "https://i.ibb.co/HrhnhpD/pexels-pixabay-261101.jpg",
         "estate_title": "Private Island Oasis with Crystal-Clear Lagoon",
         "id": 4,
         "segment_name": "Private Island",
@@ -66,7 +66,7 @@
         ]
     },
     {
-        "image": "path/to/image11.jpg",
+        "image": "https://i.ibb.co/djyCnCn/Main-pool-and-beach-at-Atmosphere-Resorts-Spa.jpg",
         "estate_title": "Charming Ski Chalet with Cozy Fireplace",
         "id": 5,
         "segment_name": "Chalet",
@@ -83,7 +83,7 @@
         ]
     },
     {
-        "image": "path/to/image12.jpg",
+        "image": "https://i.ibb.co/yFhQ7Jf/Laucala-peninsula-villa-aerial7.jpg",
         "estate_title": "Mediterranean-Style Villa with Panoramic Ocean Views",
         "id": 6,
         "segment_name": "Villa",
@@ -100,7 +100,7 @@
         ]
     },
     {
-        "image": "path/to/image13.jpg",
+        "image": "https://i.ibb.co/DpWXZg1/pexels-thanhhoa-tran-1488327.jpg",
         "estate_title": "Luxurious Treehouse Retreat nestled in Redwood Forest",
         "id": 7,
         "segment_name": "Treehouse",
@@ -117,7 +117,7 @@
         ]
     },
     {
-        "image": "path/to/image14.jpg",
+        "image": "https://i.ibb.co/W5CHfwg/roberto-nickson-MA82m-PIZe-GI-unsplash.jpg",
         "estate_title": "Modern Farmhouse Estate with Sprawling Vineyard",
         "id": 8,
         "segment_name": "Estate",
@@ -134,7 +134,7 @@
         ]
     },
     {
-        "image": "path/to/image4.jpg",
+        "image": "https://i.ibb.co/KFvBX85/toni-rose-ng-Aq3-MVtl-HC1s-unsplash.jpg",
         "estate_title": "Oceanfront Mansion with Breathtaking Views",
         "id": 9,
         "segment_name": "Mansion",
