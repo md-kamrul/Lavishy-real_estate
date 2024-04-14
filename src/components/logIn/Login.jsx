@@ -6,23 +6,30 @@ import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
 
 const Login = () => {
+
+    const handleLogin = (e) => { 
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        console.log(form.get("email"), form.get("password"));
+    }
+
     return (
         <div>
             <div className="md:w-[80%] mx-auto mt-8">
             <h2 className="text-center text-2xl font-bold">LogIn</h2>
             <div className="card shrink-0 w-[80%] mx-auto">
-                <form className="card-body">
+                <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Enter Your Email</span>
                         </label>
-                        <input type="email" placeholder="your Email" className="input input-bordered" required />
+                        <input type="email" name="email" placeholder="Your Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Enter Your Password</span>
                         </label>
-                        <input type="password" placeholder="Your Password" className="input input-bordered" required />
+                        <input type="password" name="password" placeholder="Your Password" className="input input-bordered" required />
                         <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                         <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                         <div className="flex gap-12 md:gap-0 md:justify-between">

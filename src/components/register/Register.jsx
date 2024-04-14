@@ -4,43 +4,64 @@ import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const email = form.get("email");
+        const password = form.get("password");
+
+        // creating user
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
     return (
         <div>
             <div className="md:w-[80%] mx-auto mt-8">
                 <h2 className="text-center text-2xl font-bold">Register</h2>
                 <div className="card shrink-0 w-[80%] mx-auto">
-                    <form className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Enter Your Name</span>
                             </label>
-                            <input type="text" placeholder="Your Name" className="input input-bordered" required />
+                            <input name="my-name" type="text" placeholder="Your Name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Enter Your Photo URL</span>
                             </label>
-                            <input type="text" placeholder="Your Photo URL" className="input input-bordered" required />
+                            <input name="photo-url" type="text" placeholder="Your Photo URL" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Enter Your Email</span>
                             </label>
-                            <input type="email" placeholder="Your Email" className="input input-bordered" required />
+                            <input name="email" type="email" placeholder="Your Email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Enter Your Password</span>
                             </label>
-                            <input type="password" placeholder="Your Password" className="input input-bordered" required />
+                            <input name="password" type="password" placeholder="Your Password" className="input input-bordered" required />
                             <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                             <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                             <label className="label">
                                 <span className="label-text">Confirm Your Password</span>
                             </label>
-                            <input type="password" placeholder="Confirm Your Password" className="input input-bordered" required />
+                            <input name="confirm-password" type="password" placeholder="Confirm Your Password" className="input input-bordered" required />
                             <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                             <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
                             <div className="flex justify-between">
