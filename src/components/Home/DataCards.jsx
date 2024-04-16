@@ -5,7 +5,6 @@ import 'animate.css';
 const dataCards = () => {
 
     const data = useLoaderData();
-    console.log(data);
 
     return (
         <div className="w-[80%] mx-auto">
