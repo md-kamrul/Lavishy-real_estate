@@ -7,11 +7,13 @@ import Profile from "../components/profile/Profile";
 import ContactUs from "../components/contactUs/ContactUs";
 import PropertyDetails from "../components/propertiesDetails/PropertyDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Roots></Roots>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
