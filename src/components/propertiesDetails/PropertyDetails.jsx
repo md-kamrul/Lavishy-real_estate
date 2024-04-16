@@ -10,7 +10,6 @@ const PropertyDetails = () => {
     const { id } = useParams();
     const properties = useLoaderData();
     const property = properties.find(property => property.id == id);
-    console.log("id from params ", id, "id needed ", property);
 
     return (
         <div>
