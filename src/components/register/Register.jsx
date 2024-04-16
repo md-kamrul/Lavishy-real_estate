@@ -4,21 +4,35 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, signInWithPopup, GoogleAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import app from "../../firebase/firebase.config";
+import Swal from 'sweetalert2'
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [registerError, setRegisterError] = useState("");
 
     const handleRegister = (e) => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get("email");
         const password = form.get("password");
+
+        if (password.length < 6) { 
+            setRegisterError("Password  must be at least 6 character...");
+            Swal.fire({
+                title: "Error!",
+                text: `${setRegisterError}`,
+                icon: "error"
+            });
+            return;
+        }
+
+        setRegisterError("");
 
         // creating user
         createUser(email, password)
@@ -30,7 +44,14 @@ const Register = () => {
                         "/"
                 )
             })
-            .catch()
+            .catch(error => { 
+                setRegisterError(error.message);
+                Swal.fire({
+                    title: "Error!",
+                    text: `${error.message}`,
+                    icon: "error"
+                  });
+            })
     }
 
     const auth = getAuth(app);
@@ -110,6 +131,9 @@ const Register = () => {
                                 </label>
                             </div>
                         </div>
+                        {
+                            registerError && <p className="text-red-600"> { registerError} </p>
+                        }
                         <div className="form-control mt-6">
                             <button className="btn bg-[#00c867] border-[#00c867] hover:bg-transparent hover:text-[#00c867] hover:border-[#00c867] text-white">Register</button>
                         </div>
