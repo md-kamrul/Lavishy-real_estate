@@ -2,7 +2,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { FaCheckSquare } from "react-icons/fa";
-import Footer from "./../footer/Footer"
+import Footer from "./../footer/Footer";
+import 'animate.css';
 
 const PropertyDetails = () => {
 
@@ -17,7 +18,7 @@ const PropertyDetails = () => {
                 <div className="flex flex-col md:flex-row justify-between mb-20">
                     <div>
                         <div className="flex gap-2 items-center">
-                            <span className="text-2xl font-bold">
+                            <span className="text-2xl font-bold animate__heartBeat">
                                 {property.estate_title}
                             </span>
                             <span className="text-lg text-white bg-[#00c867] px-3 rounded-3xl font-semibold">
@@ -25,8 +26,10 @@ const PropertyDetails = () => {
                             </span>
                         </div>
                         <h3 className="text-xl flex gap-1">
-                            <FaLocationDot className="text-2xl text-[#00c867]" />
-                            {property.location}
+                            <FaLocationDot className="text-2xl text-[#00c867] animate__heartBeat" />
+                            <span className="animate__heartBeat">
+                                {property.location}
+                            </span>
                         </h3>
                     </div>
                     <div className="text-2xl flex gap-1 text-[#00c867] font-bold mt-2 md:mt-0">
@@ -41,7 +44,7 @@ const PropertyDetails = () => {
                     <img className="rounded-xl" src={property.image} alt="image" />
                 </div>
                 <div className="text-[#2b3440] border-2 p-7 rounded-lg shadow-md mb-20">
-                    <span className="text-2xl font-bold border-b-4 border-b-[#00c867]">
+                    <span className="text-2xl font-bold border-b-4 border-b-[#00c867] animate__heartBeat">
                         Description
                     </span>
                     <h2 className="mt-5 ">
@@ -50,7 +53,7 @@ const PropertyDetails = () => {
                 </div>
 
                 <div className="text-[#2b3440] border-2 p-7 rounded-lg shadow-md mb-20">
-                    <span className="text-2xl font-bold border-b-4 border-b-[#00c867]">
+                    <span className="text-2xl font-bold border-b-4 border-b-[#00c867] animate__heartBeat">
                         Property Details
                     </span>
                     <div className="grid grid-cols-1 md:grid-cols-2 justify-between">
