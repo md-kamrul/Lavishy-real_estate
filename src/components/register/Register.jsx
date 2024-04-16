@@ -6,7 +6,7 @@ import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 
 const Register = () => {
@@ -38,6 +38,22 @@ const Register = () => {
 
     const handleGoogleRegister = () => {
         signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                navigate(
+                    location?.state ?
+                        location.state
+                        :
+                        "/"
+                )
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
+
+    const providerTwitter = new TwitterAuthProvider();
+    const handleTwitterRegister = () => {
+        signInWithPopup(auth, providerTwitter)
             .then((result) => {
                 const user = result.user;
                 navigate(
@@ -102,7 +118,7 @@ const Register = () => {
                             <div className="w-[20%] mx-auto mt-5">
                                 <div className="flex gap-3 md:gap-0 md:justify-evenly md:w-[80%] mx-auto">
                                     <FcGoogle onClick={handleGoogleRegister} className="text-3xl cursor-pointer" />
-                                    <FaSquareXTwitter className="text-3xl cursor-pointer" />
+                                    <FaSquareXTwitter onClick={handleTwitterRegister} className="text-3xl cursor-pointer" />
                                 </div>
                             </div>
                         </div>
