@@ -6,12 +6,32 @@ import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleLogIn = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                navigate(
+                    location?.state ?
+                        location.state
+                        :
+                        "/"
+                )
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -22,10 +42,10 @@ const Login = () => {
         signIn(email, password)
             .then(
                 navigate(
-                    location?.state?
-                    location.state
-                    :
-                    "/"
+                    location?.state ?
+                        location.state
+                        :
+                        "/"
                 )
             )
             .catch()
@@ -66,7 +86,7 @@ const Login = () => {
                             <h2 className="mt-5 text-center md:text-xl">-------------  Or LogIn Using  -------------</h2>
                             <div className="w-[20%] mx-auto mt-5">
                                 <div className="flex gap-3 md:gap-0 md:justify-evenly md:w-[80%] mx-auto">
-                                    <FcGoogle className="text-3xl cursor-pointer" />
+                                    <FcGoogle onClick={handleGoogleLogIn} className="text-3xl cursor-pointer" />
                                     <FaSquareXTwitter className="text-3xl cursor-pointer" />
                                 </div>
                             </div>

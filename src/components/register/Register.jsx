@@ -1,15 +1,18 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -19,8 +22,33 @@ const Register = () => {
 
         // creating user
         createUser(email, password)
-            .then()
+            .then(result => {
+                navigate(
+                    location?.state ?
+                        location.state
+                        :
+                        "/"
+                )
+            })
             .catch()
+    }
+
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleRegister = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                navigate(
+                    location?.state ?
+                        location.state
+                        :
+                        "/"
+                )
+            }).catch((error) => {
+                console.log(error);
+            });
     }
 
     return (
@@ -73,7 +101,7 @@ const Register = () => {
                             <h2 className="mt-5 text-center md:text-xl">-------------  Or Register Using  -------------</h2>
                             <div className="w-[20%] mx-auto mt-5">
                                 <div className="flex gap-3 md:gap-0 md:justify-evenly md:w-[80%] mx-auto">
-                                    <FcGoogle className="text-3xl cursor-pointer" />
+                                    <FcGoogle onClick={handleGoogleRegister} className="text-3xl cursor-pointer" />
                                     <FaSquareXTwitter className="text-3xl cursor-pointer" />
                                 </div>
                             </div>
