@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useAsyncError, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
@@ -53,7 +53,7 @@ const Register = () => {
             return;
         }
 
-        if (password !== confirm_password) { 
+        if (password !== confirm_password) {
             setRegisterError("Password is not matching with Confirm Password...");
             Swal.fire({
                 title: "Error!",
@@ -76,7 +76,7 @@ const Register = () => {
                 )
             })
             .catch(error => {
-                if (error.message.indexOf("(auth/email-already-in-use).")) { 
+                if (error.message.indexOf("(auth/email-already-in-use).")) {
                     setRegisterError("This email already have an account...");
                 }
                 Swal.fire({
@@ -121,6 +121,9 @@ const Register = () => {
             });
     }
 
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
     return (
         <div>
             <div className="md:w-[80%] mx-auto mt-8">
@@ -149,15 +152,27 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Enter Your Password</span>
                             </label>
-                            <input name="password" type="password" placeholder="Your Password" className="input input-bordered" required />
-                            <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
-                            <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
+                            <input name="password" type={showPassword ? "text" : "password"} placeholder="Your Password" className="input input-bordered" required />
+                            <span className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ?
+                                        <FaEye />
+                                        :
+                                        <IoMdEyeOff />
+                                }
+                            </span>
                             <label className="label">
                                 <span className="label-text">Confirm Your Password</span>
                             </label>
-                            <input name="confirm-password" type="password" placeholder="Confirm Your Password" className="input input-bordered" required />
-                            <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
-                            <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
+                            <input name="confirm-password" type={showConfirmPassword ? "text" : "password"} placeholder="Confirm Your Password" className="input input-bordered" required />
+                            <span className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
+                                {
+                                    showConfirmPassword ?
+                                        <FaEye />
+                                        :
+                                        <IoMdEyeOff />
+                                }
+                            </span>
                             <div className="flex justify-between">
                                 <label className="label label-text-alt">
                                     Have an Account? <Link to="/login" className="label-text-alt underline text-[#2b3440] font-bold"> LogIn</Link>
