@@ -9,6 +9,7 @@ const ContactUs = () => {
 
     return (
         <div>
+            <h2 className="mt-10 text-center text-2xl text-[#2b3440] font-bold">Contact Us</h2>
             <div className="p-14 bg-[#2b3440] text-white mt-24 w-[80%] mx-auto rounded-lg flex justify-between flex-col md:flex-row gap-5 md:gap-0">
                 <div className="flex gap-2">
                     <MdEmail className="text-2xl" />

@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, signInWithPopup, GoogleAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import app from "../../firebase/firebase.config";
+import Swal from 'sweetalert2'
 
 const Login = () => {
 
@@ -41,6 +42,13 @@ const Login = () => {
 
         signIn(email, password)
             .then(
+                
+                Swal.fire({
+                    title: "Done!",
+                    text: `LogIn successfully...`,
+                    icon: "success"
+                }),
+
                 navigate(
                     location?.state ?
                         location.state

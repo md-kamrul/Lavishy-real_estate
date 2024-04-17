@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link, useAsyncError, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
@@ -85,6 +85,12 @@ const Register = () => {
                     icon: "error"
                 });
             })
+
+        Swal.fire({
+            title: "Done!",
+            text: `Your Account has been successfully created...`,
+            icon: "success"
+        });
     }
 
     const auth = getAuth(app);
@@ -94,14 +100,25 @@ const Register = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
-                navigate(
-                    location?.state ?
-                        location.state
-                        :
-                        "/"
-                )
-            }).catch((error) => {
-                console.log(error);
+
+                Swal.fire({
+                    title: "Done!",
+                    text: `Your Account has been successfully created...`,
+                    icon: "success"
+                }),
+
+                    navigate(
+                        location?.state ?
+                            location.state
+                            :
+                            "/"
+                    )
+            }).catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: `Something went wrong. Please try again...`,
+                    icon: "error"
+                });
             });
     }
 
@@ -110,14 +127,25 @@ const Register = () => {
         signInWithPopup(auth, providerTwitter)
             .then((result) => {
                 const user = result.user;
-                navigate(
-                    location?.state ?
-                        location.state
-                        :
-                        "/"
-                )
-            }).catch((error) => {
-                console.log(error);
+
+                Swal.fire({
+                    title: "Done!",
+                    text: `Your Account has been successfully created...`,
+                    icon: "success"
+                }),
+
+                    navigate(
+                        location?.state ?
+                            location.state
+                            :
+                            "/"
+                    )
+            }).catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: `Something went wrong. Please try again...`,
+                    icon: "error"
+                });
             });
     }
 
