@@ -182,7 +182,7 @@ const Register = () => {
                                 <span className="label-text">Enter Your Password</span>
                             </label>
                             <input name="password" type={showPassword ? "text" : "password"} placeholder="Your Password" className="input input-bordered" required />
-                            <span className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                            <span className="text-xl relative ml-[86%] md:ml-[90%] lg:ml-[95%] top-[-34px] cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
                                 {
                                     showPassword ?
                                         <FaEye />
@@ -194,7 +194,7 @@ const Register = () => {
                                 <span className="label-text">Confirm Your Password</span>
                             </label>
                             <input name="confirm-password" type={showConfirmPassword ? "text" : "password"} placeholder="Confirm Your Password" className="input input-bordered" required />
-                            <span className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
+                            <span className="text-xl relative ml-[86%] md:ml-[90%] lg:ml-[95%] top-[-34px] cursor-pointer" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                                 {
                                     showConfirmPassword ?
                                         <FaEye />
