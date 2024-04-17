@@ -21,12 +21,43 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get("email");
         const password = form.get("password");
+        const confirm_password = form.get("confirm-password");
 
-        if (password.length < 6) { 
-            setRegisterError("Password  must be at least 6 character...");
+        if (password.length < 6) {
+            setRegisterError("Password must be at least 6 character...");
             Swal.fire({
                 title: "Error!",
-                text: `${setRegisterError}`,
+                text: `${registerError}`,
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!(/[a-z]/.test(password))) {
+            setRegisterError("Password must have an Uppercase letter...");
+            Swal.fire({
+                title: "Error!",
+                text: `${registerError}`,
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!(/[A-Z]/.test(password))) {
+            setRegisterError("Password must have an Uppercase letter...");
+            Swal.fire({
+                title: "Error!",
+                text: `${registerError}`,
+                icon: "error"
+            });
+            return;
+        }
+
+        if (password !== confirm_password) { 
+            setRegisterError("Password is not matching with Confirm Password...");
+            Swal.fire({
+                title: "Error!",
+                text: `${registerError}`,
                 icon: "error"
             });
             return;
@@ -44,13 +75,15 @@ const Register = () => {
                         "/"
                 )
             })
-            .catch(error => { 
-                setRegisterError(error.message);
+            .catch(error => {
+                if (error.message.indexOf("(auth/email-already-in-use).")) { 
+                    setRegisterError("This email already have an account...");
+                }
                 Swal.fire({
                     title: "Error!",
-                    text: `${error.message}`,
+                    text: `${registerError}`,
                     icon: "error"
-                  });
+                });
             })
     }
 
@@ -131,9 +164,6 @@ const Register = () => {
                                 </label>
                             </div>
                         </div>
-                        {
-                            registerError && <p className="text-red-600"> { registerError} </p>
-                        }
                         <div className="form-control mt-6">
                             <button className="btn bg-[#00c867] border-[#00c867] hover:bg-transparent hover:text-[#00c867] hover:border-[#00c867] text-white">Register</button>
                         </div>
