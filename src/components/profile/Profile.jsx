@@ -1,6 +1,7 @@
 import Footer from "../footer/Footer";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../firebase/firebase.config";
+import Swal from 'sweetalert2'
 
 const Profile = () => {
 
@@ -10,6 +11,30 @@ const Profile = () => {
     var displayName;
     var email;
     var photo;
+
+    const saveChanges = (e) => {
+        e.preventDefault();
+        const newpictureLink = document.getElementById('newpictureLink').value;
+        const newName = document.getElementById('newName').value;
+
+        updateProfile(auth.currentUser, {
+            displayName: `${newName}`, photoURL: `${newpictureLink}`,
+        }).then(() => {
+            // Profile updated!
+            Swal.fire({
+                title: "Done!",
+                text: `Account info has been updated...`,
+                icon: "success"
+            });
+        }).catch(() => {
+            // An error occurred
+            Swal.fire({
+                title: "Error!",
+                text: `Something went wrong. Please try again...`,
+                icon: "error"
+            });
+        });
+    }
 
     if (user !== null) {
         user.providerData.forEach((profile) => {
@@ -38,22 +63,6 @@ const Profile = () => {
         view.classList.add("hidden");
         editBtn.classList.add("bg-[#00c867]", "text-[#2b3440]", "p-3", "rounded-lg")
         viewBtn.classList.remove("bg-[#00c867]", "text-[#2b3440]", "p-3", "rounded-lg")
-    }
-
-    const saveChanges = (e) => {
-        e.preventDefault();
-        const newpictureLink = document.getElementById('newpictureLink').value;
-        const newName = document.getElementById('newName').value;
-
-        // updateProfile(auth.currentUser, {
-        //     displayName: {newName}, photoURL: {newpictureLink}, 
-        // }).then(() => {
-        //     // Profile updated!
-        //     // ...
-        // }).catch((error) => {
-        //     // An error occurred
-        //     // ...
-        // });
     }
 
     document.title = "Lavishy - Profile"
