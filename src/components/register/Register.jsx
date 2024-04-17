@@ -123,6 +123,7 @@ const Register = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    document.title = "Lavishy - Register"
 
     return (
         <div>

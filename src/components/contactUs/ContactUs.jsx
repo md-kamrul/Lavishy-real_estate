@@ -5,6 +5,9 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 // import LocationMap from "./locationMap/LocationMap";
 
 const ContactUs = () => {
+
+    document.title = "Lavishy - Contact Us"
+
     return (
         <div>
             <div className="p-14 bg-[#2b3440] text-white mt-24 w-[80%] mx-auto rounded-lg flex justify-between flex-col md:flex-row gap-5 md:gap-0">

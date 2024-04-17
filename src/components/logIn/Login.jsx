@@ -67,6 +67,7 @@ const Login = () => {
             });
     }
 
+    document.title = "Lavishy - LogIn"
     return (
         <div>
             <div className="md:w-[80%] mx-auto mt-8">

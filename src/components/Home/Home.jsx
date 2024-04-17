@@ -4,7 +4,7 @@ import DataCards from "./DataCards"
 
 const Home = () => {
 
-    
+    document.title = "Lavishy - Luxury Real Estate"
 
     return (
         <div>
