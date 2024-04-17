@@ -10,6 +10,7 @@ const PropertyDetails = () => {
     const { id } = useParams();
     const properties = useLoaderData();
     const property = properties.find(property => property.id == id);
+    document.title = "Lavishy - Property Details"
 
     return (
         <div>
