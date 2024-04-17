@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import Footer from "../footer/Footer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, signInWithPopup, GoogleAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import app from "../../firebase/firebase.config";
@@ -102,6 +102,7 @@ const Login = () => {
                 })
             });
     }
+    const [showPassword, setShowPassword] = useState(false);
 
     document.title = "Lavishy - LogIn"
     return (
@@ -120,9 +121,15 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Enter Your Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="Your Password" className="input input-bordered" required />
-                            <FaEye className="text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
-                            <IoMdEyeOff className="hidden text-xl relative right-[-88%] md:right-[-94%] top-[-34px] cursor-pointer" />
+                            <input name="password" type={showPassword ? "text" : "password"} placeholder="Your Password" className="input input-bordered" required />
+                            <span className="text-xl relative ml-[86%] md:ml-[90%] lg:ml-[95%] top-[-34px] cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ?
+                                        <FaEye />
+                                        :
+                                        <IoMdEyeOff />
+                                }
+                            </span>
                             <div className="flex gap-12 md:gap-0 md:justify-between">
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
