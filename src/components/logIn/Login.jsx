@@ -23,6 +23,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
+                // console.log(result);
 
                 Swal.fire({
                     title: "Done!",
