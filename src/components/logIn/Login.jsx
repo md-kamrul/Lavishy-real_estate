@@ -23,14 +23,25 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
-                navigate(
-                    location?.state ?
-                        location.state
-                        :
-                        "/"
-                )
-            }).catch((error) => {
-                console.log(error);
+
+                Swal.fire({
+                    title: "Done!",
+                    text: `LogIn successfully...`,
+                    icon: "success"
+                }),
+
+                    navigate(
+                        location?.state ?
+                            location.state
+                            :
+                            "/"
+                    )
+            }).catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: `Something went wrong. Please try again...`,
+                    icon: "error"
+                })
             });
     }
 
@@ -42,7 +53,7 @@ const Login = () => {
 
         signIn(email, password)
             .then(
-                
+
                 Swal.fire({
                     title: "Done!",
                     text: `LogIn successfully...`,
@@ -56,7 +67,13 @@ const Login = () => {
                         "/"
                 )
             )
-            .catch()
+            .catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: `Please enter valid email and password...`,
+                    icon: "error"
+                })
+            })
     }
 
     const providerTwitter = new TwitterAuthProvider();
@@ -64,14 +81,25 @@ const Login = () => {
         signInWithPopup(auth, providerTwitter)
             .then((result) => {
                 const user = result.user;
-                navigate(
-                    location?.state ?
-                        location.state
-                        :
-                        "/"
-                )
-            }).catch((error) => {
-                console.log(error);
+
+                Swal.fire({
+                    title: "Done!",
+                    text: `LogIn successfully...`,
+                    icon: "success"
+                }),
+
+                    navigate(
+                        location?.state ?
+                            location.state
+                            :
+                            "/"
+                    )
+            }).catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: `Something went wrong. Please try again...`,
+                    icon: "error"
+                })
             });
     }
 
