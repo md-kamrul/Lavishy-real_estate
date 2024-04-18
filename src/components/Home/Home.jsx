@@ -1,6 +1,7 @@
 import Footer from "../footer/Footer";
 import OurClients from "../ourClients/OurClients";
 import DataCards from "./DataCards"
+import FaqSection from "./FaqSection";
 
 const Home = () => {
 
@@ -45,6 +46,9 @@ const Home = () => {
 
             {/* client */}
             <OurClients></OurClients>
+
+            {/* FAQ section */}
+            <FaqSection></FaqSection>
 
             {/* footer */}
             <Footer></Footer>
