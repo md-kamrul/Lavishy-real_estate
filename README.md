@@ -47,3 +47,6 @@ The website utilizes user authentication through email and password or social me
 
 ## WEBSITE DEMO
 ![Image](/public/website_overview/home.jpg)
+![Image](/public/website_overview/login.jpg)
+![Image](/public/website_overview/register.jpg)
+![Image](/public/website_overview/contact_us.jpg)
