@@ -26,31 +26,31 @@ export default function App() {
                     className="mySwiper flex items-center"
                 >
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_1.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_1.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_2.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_2.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_3.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_3.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_4.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_4.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_5.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_5.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_6.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_6.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_7.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_7.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_8.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_8.png" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-[60%] ms-auto w-[60%] my-auto' src="./../../../public/assets/clients/clients_9.png" alt="" />
+                        <img className='w-[60%] ms-auto my-auto' src="/assets/clients/clients_9.png" alt="" />
                     </SwiperSlide>
                 </Swiper>
             </div>
