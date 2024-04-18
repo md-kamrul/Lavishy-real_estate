@@ -46,7 +46,7 @@ The website utilizes user authentication through email and password or social me
   *  Animate.css (Property Details Section)
 
 ## WEBSITE DEMO
-![Image](/public/website_overview/home.jpg)
-![Image](/public/website_overview/login.jpg)
-![Image](/public/website_overview/register.jpg)
-![Image](/public/website_overview/contact_us.jpg)
+![Image](/public/website_overview/home.jpg) <br>
+![Image](/public/website_overview/login.jpg) <br>
+![Image](/public/website_overview/register.jpg) <br>
+![Image](/public/website_overview/contact_us.jpg) <br>
